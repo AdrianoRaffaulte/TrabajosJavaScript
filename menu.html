@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de restaurante</title>
+    {# Segundo Enunciado 
+Crea un programa que simule un menú de un restaurante. El programa debe pedir al usuario que ingrese un 
+número del 1 al 4 para seleccionar un plato. Según la opción elegida, se mostrará un mensaje indicando el 
+plato seleccionado y su precio. 
+ Opción 1: Hamburguesa ($5000) 
+ Opción 2: Pizza ($8000) 
+ Opción 3: Ensalada ($3000) 
+ Opción 4: Sopa ($4800) 
+#}
+</head>
+<body>
+    <h1>Menú de Restaurante</h1>
+    <script>
+        let opcion = prompt("Esto es el menú de un restaurante. Por favor elija un número para elegir qué comprar: \n1. Hamburguesa. \n2. Pizza \n3. Ensalada \n4. Sopa")
+
+        switch(parseInt(opcion)){
+            case 1:
+                document.write("Opción 1: Hamburguesa ($50000)");
+                break;
+            case 2:
+                document.write("Opción 2: Pizza ($8000)");
+                break;
+            case 3:
+                document.write("Opción 3: Ensalada ($3000)");
+                break;
+            case 4:
+                document.write("Opción 4: Sopa ($4800)");
+                break;
+            default:{
+                document.write('Su opción no es válida.')
+            }
+        }
+    </script>
+</body>
+</html>
