@@ -14,7 +14,31 @@
                 let cantidadProducto = parseInt(prompt("Ingrese la cantidad de productos (número entero):"));
                 let metodoPago = prompt("Ingrese el método de pago ('efectivo', 'tarjeta' o 'transferencia'):");
                 let codigoPromocional = prompt("Ingrese un código promocional (opcional, puede dejar vacío):");
-        
+
+                let subtotal, descuento, iva, total;
+
+                if (isNaN(precioProducto) || precioProducto <= 0){
+                    document.write("Error: El precio debe ser un número positivo.<br>");
+                } else if (isNaN(cantidadProducto) || cantidadProducto <= 0){
+                    document.write("Error: La cantidad debe ser un número entero positivo.<br>");
+                } else if (!['efectivo', 'tarjeta','transferencia'].includes(metodoPago)){
+                    document.write("Error: el método de pago no es válido.<br>");
+                } else{
+                    let subtotal = precioProducto * cantidadProducto;
+                let descuento = 0;
+
+                if (codigoPromocional === "DESCUENTO10") {
+                    descuento = subtotal * 0.10;
+                }
+
+                let subtotalConDescuento = subtotal - descuento;
+
+                let iva = subtotalConDescuento * 0.19;
+
+                let total = subtotalConDescuento + iva;
+                }
+
+
                 document.write(`<h2>Resumen de la compra</h2>`);
                 document.write(`Producto: ${nombreProducto}<br>`);
                 document.write(`Cantidad: ${cantidadProducto}<br>`);
