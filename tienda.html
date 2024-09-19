@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+</head>
+    <body>
+        <h1>Tienda de productos electrónicos</h1>
+
+        <script>
+            let nombreProducto = prompt("Ingrese el nombre del producto:");
+                let precioProducto = parseFloat(prompt("Ingrese el precio del producto (número decimal):"));
+                let cantidadProducto = parseInt(prompt("Ingrese la cantidad de productos (número entero):"));
+                let metodoPago = prompt("Ingrese el método de pago ('efectivo', 'tarjeta' o 'transferencia'):");
+                let codigoPromocional = prompt("Ingrese un código promocional (opcional, puede dejar vacío):");
+        
+                document.write(`<h2>Resumen de la compra</h2>`);
+                document.write(`Producto: ${nombreProducto}<br>`);
+                document.write(`Cantidad: ${cantidadProducto}<br>`);
+                document.write(`Subtotal: ${subtotal}<br>`);
+                document.write(`Descuento: ${descuento}<br>`);
+                document.write(`IVA (19%): ${iva}<br>`);
+                document.write(`Total a pagar: ${total}`);
+</script>
+</body>
+</html>
