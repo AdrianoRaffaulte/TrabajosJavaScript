@@ -12,24 +12,30 @@
         let numero2 = parseFloat(prompt("Ingrese un segundo numero."));
         let operacion = prompt("Ingrese que operación quiere realizar '+','-','*','/'");
 
-        switch(operacion){
-            case '+':
-                total = numero1 + numero2
-                document.write("El total de su sumaa es: " + total);
-                break;
-            case '-':
-                total = numero1 - numero2
-                document.write("El total de su resta es: " + total);
-                break;
-            case '*':
-                total = numero1 * numero2
-                document.write("El total de su multiplicación es: " + total);
-                break;
-            case '/':
-                document.write("El total de su división es: " + total);
-                break;
-            default:{
-                document.write('Su opción no es válida.')
+        // AGREGAR ISNAN PARA COMPROBAR QUE LOS VALORES INGRESADOS SEAN NUMEROS.
+        if(isNaN(numero1) || isNaN(numero2)){
+            document.write("INGRESE NUMEROS VALIDOS.")
+        }else {
+            let total;
+            switch(operacion) {
+                case '+':
+                    total = numero1 + numero2
+                    document.write("El total de su suma es: " + total);
+                    break;
+                case '-':
+                    total = numero1 - numero2
+                    document.write("El total de su resta es: " + total);
+                    break;
+                case '*':
+                    total = numero1 * numero2
+                    document.write("El total de su multiplicación es: " + total);
+                    break;
+                case '/':
+                    document.write("El total de su división es: " + total);
+                    break;
+                default:{
+                    document.write('Su opción no es válida.')
+                }
             }
         }
     </script>
