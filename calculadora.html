@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <script>
+        let numero1 = parseFloat(prompt("Esto es una calculadora. Por favor ingrese un primer número"));
+        let numero2 = parseFloat(prompt("Ingrese un segundo numero."));
+        let operacion = prompt("Ingrese que operación quiere realizar '+','-','*','/'");
+
+        switch(operacion){
+            case '+':
+                total = numero1 + numero2
+                document.write("El total de su sumaa es: " + total);
+                break;
+            case '-':
+                total = numero1 - numero2
+                document.write("El total de su resta es: " + total);
+                break;
+            case '*':
+                total = numero1 * numero2
+                document.write("El total de su multiplicación es: " + total);
+                break;
+            case '/':
+                document.write("El total de su división es: " + total);
+                break;
+            default:{
+                document.write('Su opción no es válida.')
+            }
+        }
+    </script>
+</body>
+</html>
